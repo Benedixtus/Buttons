@@ -1,0 +1,138 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('ninepin.ttf');
+   }
+
+body {
+    background-color: #1f1f1f;
+    
+}
+.menu-tarolo {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 auto;
+   justify-content: center;
+   aspect-ratio: 3/1;
+   max-width: 60vw;
+}
+.menu-kartya-tok {
+    background: black;
+    flex-basis: 20%;
+    height: 100%;
+    margin: auto;
+    border-radius: 4.5vw;
+    border: 0.3vw solid black;
+    box-shadow: 1vw 1vw 1vw black, -1vw -1vw 1vw #333333;
+    transform:translateY(40vh);
+
+}
+.menu-kartya-tok:hover {
+    box-shadow: none;
+    transition: .20s ease-in-out;
+}
+
+.menu-kartya {
+    width: 99%;
+    height: 99%;
+    margin: auto;
+    border-radius: 4.3vw;
+    transform:translate3d(0, -1vw, 0);
+    margin: auto;
+    background-color: #292929;
+    border: 0.1vw solid #303030;
+}
+.menu-kartya-tok:hover > .menu-kartya {
+    transform:translate3d(0px, 0px, 0px);
+    transition: .20s ease-in-out;
+    box-shadow: none;
+}
+.cimtarto {
+    height: 98%;
+    width: 98%;
+    border-radius: 4.3vw;
+    margin-top: -10%;
+}
+.p-cim {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 10vw;
+    margin-left: 15%;
+    margin-top: 20%;
+    padding: 0;
+    color:transparent;
+    text-shadow: 0 0 0.2vw #b3afaf, 0 0 0 #d4d4d4;
+}
+.p-symbol {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 4vw;
+    margin-left: 65%;
+    margin-top: -75%;
+    padding: 0;
+    color:transparent;
+    text-shadow: 0 0 0.2vw #b3afaf, 0 0 0 #d4d4d4;
+}
+
+.uzenet-tarolo {
+    flex-basis: 100%;
+    position: fixed;
+    height: 30vh;
+    padding-top: 3vh;
+    margin-bottom: 5vh;
+
+}
+.uzenet {
+    aspect-ratio: 10/1;
+    max-width: 70vw;
+    margin: auto;
+    background-color: gray;
+    border-radius: 0.5vw;
+    border: 0.4vw solid black;
+    box-shadow: 0.5vw 1vw 1vw black, -0.5vw -1vw 1vw #333333;
+}
+.display-message  {
+    font-family: 'digital-clock-font';
+    font-size: 3vw;
+    margin: auto;
+    margin-left: 3vw;
+    margin-bottom: 0%;
+    transform: translateY(.5vh);
+
+
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .5vw; /* Adjust as needed */
+    animation: 
+      typing 1.3s steps(44, end)
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 90% }
+}
+.uzenet1 {
+    visibility: hidden;
+    font-size: 0;
+}
+.uzenet2 {
+    visibility: hidden;
+    font-size: 0;
+}
+.uzenet3 {
+    visibility: hidden;
+    font-size: 0;
+}
+.kartya1:hover ~  .uzenet-tarolo .uzenet1{
+    visibility: visible;
+    font-size: 3vw;
+}
+.kartya2:hover ~  .uzenet-tarolo .uzenet2{
+    visibility: visible;
+    font-size: 3vw;
+}
+.kartya3:hover ~  .uzenet-tarolo .uzenet3{
+    visibility: visible;
+    font-size: 3vw;
+}
+.menu-kartya-tok:hover ~ .uzenet-tarolo .alap{
+    visibility: hidden;
+    height:0;
+}
